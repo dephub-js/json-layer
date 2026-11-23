@@ -1,0 +1,83 @@
+{
+  "name": "@dephub/json-layer",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Build, validate, transform, and watch JSON content layers using `@dephub/layer` with a ready-to-use CLI and programmatic APIs.",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "bin": {
+    "json-layer": "./dist/cli.js"
+  },
+  "scripts": {
+    "prepublishOnly": "pnpm check && pnpm test && pnpm build",
+    "release": "pnpm publish",
+    "docs": "lineo md 'src/**/*.ts' --outFile code.md --outDir temp",
+    "test": "node --test",
+    "check": "pnpm fmt && pnpm lint && pnpm check-types",
+    "check-types": "tsc --noEmit --skipLibCheck",
+    "lint": "eslint . --fix --max-warnings 0",
+    "fmt": "prettier --write .",
+    "clean": "rm -rf dist .json-layer",
+    "prepack": "pnpm check && pnpm build",
+    "pack": "pnpm pack",
+    "build": "vite build",
+    "dev": "vite build -w --mode development"
+  },
+  "keywords": [
+    "cli",
+    "json",
+    "node",
+    "layer",
+    "json-layer",
+    "build-tool",
+    "typescript",
+    "javascript",
+    "content-layer",
+    "content-build"
+  ],
+  "author": {
+    "name": "Estarlin R",
+    "email": "dev@estarlincito.com",
+    "url": "https://estarlincito.com"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dephub-js/json-layer#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dephub-js/json-layer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dephub-js/json-layer/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@dephub/layer": "^1.0.5",
+    "@dephub/layer-entry": "^1.0.0",
+    "@dephub/path": "^2.0.0",
+    "@dephub/read": "^1.0.3"
+  },
+  "devDependencies": {
+    "@dephub/eslint-ts": "^1.0.5",
+    "@dephub/glob": "^1.0.2",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.15.0",
+    "prettier": "^3.10.1",
+    "typescript": "6.0.3",
+    "vite": "^8.3.8",
+    "vite-plugin-dts": "^5.1.2"
+  },
+  "imports": {
+    "#/*": "./src/*"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "packageManager": "pnpm@10.30.3"
+}
