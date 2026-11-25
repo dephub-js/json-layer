@@ -1,7 +1,7 @@
 {
   "name": "@dephub/json-layer",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Build, validate, transform, and watch JSON content layers using `@dephub/layer` with a ready-to-use CLI and programmatic APIs.",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -58,15 +58,15 @@
     "access": "public"
   },
   "dependencies": {
-    "@dephub/layer": "^1.0.5",
+    "@dephub/layer": "^1.0.10",
     "@dephub/layer-entry": "^1.0.0",
-    "@dephub/path": "^2.0.0",
-    "@dephub/read": "^1.0.3"
+    "@dephub/path": "^2.0.1",
+    "@dephub/read": "^1.0.5"
   },
   "devDependencies": {
-    "@dephub/eslint-ts": "^1.0.5",
-    "@dephub/glob": "^1.0.2",
-    "@types/node": "^26.6.6",
+    "@dephub/eslint-ts": "^1.0.6",
+    "@dephub/glob": "^1.0.3",
+    "@types/node": "^26.6.10",
     "eslint": "^10.15.0",
     "prettier": "^3.10.1",
     "typescript": "6.0.3",
